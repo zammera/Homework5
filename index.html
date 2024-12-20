@@ -1,0 +1,68 @@
+<!-------------------------------------------------------------------------- 
+-File: index.html 
+-GUI Assignment:  Creating a row of functioning Scrabble 
+-Allen Zammer, UMass Lowell Computer Science, allen_zammer@student.uml.edu 
+-Copyright (c) 2024 by Allen.  All rights reserved.  May be freely copied or 
+-excerpted for educational purposes with credit to the author. 
+-updated by AZ on December 20, 2024 at  1:08 PM
+--------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scrabble</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  </head>
+    <body>
+        <article>
+            <header>
+                <p id="title">Scabble: Spellers Unite:</p>
+            </header>
+            <div id="word-box">
+                <div id="word">Word: <span id="updateWord"></span></div>                   
+                <div id="left">Tiles left: <span id="updateTileAmount">100</span></div>
+            </div>
+            <div id="board">
+            </div>
+            <div id="info">
+                <div id="rulez">
+                    Rules Box:<br>
+                    <div id="rule-box">
+                        <div id="">Does your Word have:
+                            <ul>
+                                <li id="two" class="not-valid">Atleast Two Letters.</li>
+                                <li id="gap" class="not-valid">No Gaps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="scorez">
+                    Score Box:<br>
+                    <div id="score-box">
+                        <div id="highscore">High Score: <span id="updateHighScore">0</span></div>
+                        <div id="score">Score: <span id="updateScore">0</span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="button-zone">
+                <button id="restart" on-click="">Restart</button>
+                <button id="submit" on-click="" disabled>Submit</button>
+            </div>
+            <div id="rack" class="ui-widget-header">
+            </div>
+            <div id="popup-overlay">
+                <div id="popup-box">
+                    <h2>Select What You want your tile to be!</h2>
+                    <div id="letter-buttons-container"></div>
+                    <div id="choosenLetter"></div>
+                </div>
+            </div>
+        </article>
+	</body> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+	<script src="js/script.js"></script>
+</html>

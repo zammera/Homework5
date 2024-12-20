@@ -1,0 +1,217 @@
+/* ****************************************************************************
+*File: script.js 
+*GUI Assignment:  Creating a row of functioning Scrabble 
+*Allen Zammer, UMass Lowell Computer Science, allen_zammer@student.uml.edu 
+*Copyright (c) 2024 by Allen.  All rights reserved.  May be freely copied or 
+*excerpted for educational purposes with credit to the author. 
+*updated by AZ on December 20, 2024 at  1:08 PM
+*******************************************************************************/
+.tile{
+    width: 100px;
+    height: 100px;
+    float: left;
+    position: relative;
+}
+body {
+    margin-top: 0; /*Place holder for image*/
+    background-image: url("../images/table.jpg");
+    background-size: cover;
+}
+
+#title {
+    color: red;
+    font-size: 42px;
+    margin-left: 10px;
+    margin-top: 0;
+    text-decoration-line: underline;
+    z-index: 99;
+}
+
+.blank-square {
+    background-image: url("../images/Scrabble_BlankSquare_81x87.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.double-square {
+    background-image: url("../images/Scrabble_DoubleWordScore_81x87.jpg");
+    background-position: center;
+    background-size: cover  ;
+    background-repeat: no-repeat;
+}
+
+#rulez, #scorez {
+    color: white;
+    width: 40%;
+    height: 150px;
+
+}
+#score-box, #rule-box {
+    border: solid 2px;
+    border-color: white;
+    height: 100px;
+    padding: 5px;
+}
+
+.not-valid {
+    filter:opacity(50%);
+}
+
+ul {
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+#info, #button-zone, #word-box {
+    width: 714px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#word-box {
+    color: white;
+    justify-content: space-evenly;
+    gap:200px;
+}
+
+#button-zone {
+    margin-bottom: 25px;;
+    justify-content: space-evenly;
+}
+
+button {
+    border: solid black 1px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 50%;
+    width: 100px;
+    height: 50px;
+}
+
+article {
+    margin-top: 0;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #277714;
+    max-width: 1000px;
+    padding-bottom: 15px;
+}
+
+#board {
+    width: 714px;
+    height: 120px;
+    padding: 0;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    
+}
+
+.square {
+    padding: 0;
+    border: 0;    
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 1px;
+    position: relative;
+}
+
+#rack {
+    width: 800px;
+    height: 182px;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 25px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    border:0;
+    background-image: url("../images/scrabble-tile-holder-406774_640.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #277714;
+}
+
+#popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#letter-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.letter-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+}
+
+.letter-button:hover {
+    background-color: #0056b3;
+}
+
+#close-popup {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #DC3545;
+    color: white;
+    cursor: pointer;
+}
+
+#close-popup:hover {
+    background-color: #a71d2a;
+}
+
+#selected-message {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #28a745;
+}
+
